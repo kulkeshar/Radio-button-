@@ -20,9 +20,28 @@ public class FindradioButton {
 			System.out.println(m);
 			Thread.sleep(2000);
 			button.get(m).click();
+			
+			System.out.println();
 			System.out.println("select radio button");
 			
+			driver.manage().window().maximize();
+			
+			
 		}
+		
+		WebElement color=driver.findElement(By.xpath("//input[@value=\\\"purple\\\"]"));
+		
+		color.click();
+		
+		if(color.isSelected()) {
+			System.out.println("Purple Radio button selected");
+			
+		}
+		else {
+			System.out.println("Purple Radio button not selected");
+			
+		}
+		driver.quit();
 		
 	
 
